@@ -6,7 +6,7 @@ import '../models/Seances.dart';
 
 class SeanceService {
   final Dio _dio = Dio(BaseOptions(
-    baseUrl: 'http://127.0.0.1:8000/api/',
+    baseUrl: 'http://141.98.155.114:8080//api/',
   ));
 
   final _storage = const FlutterSecureStorage();

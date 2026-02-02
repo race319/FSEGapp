@@ -3,7 +3,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import '../models/Enseignement.dart';
 
 class EnseignantService {
-  final Dio _dio = Dio(BaseOptions(baseUrl: 'http://127.0.0.1:8000/api/'));
+  final Dio _dio = Dio(BaseOptions(baseUrl: 'http://141.98.155.114:8080//api/'));
   final _storage = const FlutterSecureStorage();
 
   Future<String?> _getToken() async {

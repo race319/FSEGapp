@@ -6,7 +6,7 @@ import '../models/creneau.dart';
 
 class VoeuxExamenService extends GetxService {
   final Dio _dio = Dio(BaseOptions(
-    baseUrl: 'http://127.0.0.1:8000/api/', // ton API
+    baseUrl: 'http://141.98.155.114:8080//api/', // ton API
     receiveDataWhenStatusError: true,
   ));
 

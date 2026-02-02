@@ -4,7 +4,7 @@ import '../models/veoux enseignant.dart';
 
 
 class VoeuxEnseignementService {
-  final Dio _dio = Dio(BaseOptions(baseUrl: 'http://127.0.0.1:8000/api/'));
+  final Dio _dio = Dio(BaseOptions(baseUrl: 'http://141.98.155.114:8080//api/'));
   final FlutterSecureStorage _storage = FlutterSecureStorage();
 
   Future<String?> _getToken() async {

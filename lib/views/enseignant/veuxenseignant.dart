@@ -23,6 +23,21 @@ class VoeuxEnseignementView extends StatelessWidget {
     enseignantController.fetchCharge();
     controller.fetchVoeux();
 
+    // Synchroniser les sélections avec les vœux enregistrés
+    ever(controller.voeuxList, (_) {
+      controller.selections.forEach((jour, set) {
+        set.clear();
+      });
+
+      for (var voeu in controller.voeuxList) {
+        String jour = jourFromCode(voeu.codeJour);
+        int seanceIndex = voeu.codeSeance - 1;
+        if (controller.selections.containsKey(jour)) {
+          controller.selections[jour]!.add(seanceIndex);
+        }
+      }
+    });
+
     return Scaffold(
       backgroundColor: const Color(0xFFF2F3F7),
       body: CustomScrollView(

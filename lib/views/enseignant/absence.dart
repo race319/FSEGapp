@@ -100,9 +100,12 @@ class _AbsenceView2State extends State<AbsenceView2> {
           _buildEtudiantsList(),
           SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
+              padding: const EdgeInsets.all(16.0),
               child: _buildSaveButton(),
             ),
+          ),
+          const SliverToBoxAdapter(
+            child: SizedBox(height: 100),
           ),
         ],
       ),
@@ -570,7 +573,7 @@ class _AbsenceView2State extends State<AbsenceView2> {
                                 ),
                                 const SizedBox(width: 4),
                                 Text(
-                                  '$absenceCount absence${absenceCount > 1 ? 's' : ''}',
+                                  '$absenceCount abs${absenceCount > 1 ? 's' : ''}',
                                   style: TextStyle(
                                     fontSize: 12,
                                     color: absenceCount > 0
@@ -603,7 +606,7 @@ class _AbsenceView2State extends State<AbsenceView2> {
                                   Text(
                                     'ÉLIMINÉ',
                                     style: TextStyle(
-                                      fontSize: 11,
+                                      fontSize: 9,
                                       color: Colors.red.shade700,
                                       fontWeight: FontWeight.bold,
                                     ),
